@@ -64,7 +64,7 @@
  
     };
  
-}(jQuery));
+})( jQuery );
 
 
-//}( jQuery1 ));
+//}( jQuery ));
