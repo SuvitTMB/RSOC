@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <!--<link href='css/add.css' rel="stylesheet" type="text/css">-->
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <style type="text/css">
+    .w3-container, .w3-panel {
+      padding:0px;
+    }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: #fff;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'" style="font-size: 12px;">LINE Retail Society</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div><img src="./img/color.jpg" style="width:100%;margin-top:50px;max-height: 300px;"></div>
+    <div class="container">
+      <center><div class="btn-t33">การจัดเแบ่งทีม</div></center>
+      <div class="text-team">กิจกรรมนี้จะทำงานร่วมกันเป็นทีม โดยมีการจัดแบ่งทีมตามสี รวม 8 ทีม ในแต่ละทีมจะต้องเข้าร่วมตามฐานต่าง ๆ ที่กำหนดไว้ ในแต่ละฐานจะได้คะแนนสะสมเพื่อนำมาเป็นคะแนนการแข่งขันประเภททีม ทีมที่ทำคะแนนได้สูงสุดรับรางวัลทั้งทีมไปเลย งานนี้แจ้งใหญ่ลุ้นรางวัลนับแสนเลยทีเดียว</div>
+      <div class="btn-t3">คุณและทีมของคุณ</div>
+      <div id="DisplayYourTeam" style="margin-top:8px;"></div>
+      <!--
+      <div class="box-user">
+        <div style="width:25%;float: left;text-align: center;padding:8px; "><img src="https://profile.line-scdn.net/0hoLlg-mNNMGNRHiaTpMdPNG1bPg4mMDYrKX8qVnIYOgYpe3QwbCp2AXVKaVN_fnMzOC16V3NMagF8" class="profile-team1">
+          <div style="margin-top:-30px;"><img src="./img/RSOC-6.png" style="width:40px;"></div>            
+          </div>
+        <div style="width:75%;float: left;">
+          <div class="text-1" style="margin-top:5px;">doc.data().EmpName<font color="#f68b1f"> (doc.data().ShortName)</font></div>
+          <div class="text-2">doc.data().EmpRH<br>doc.data().empPhone</div>
+          <div class="btn-t2" style="margin:2px 0 0 0;">ดูรายละเอียดของทีม</div>
+        </div>
+      </div>
+      -->
+      <div class="clr"></div>
+      <div class="btn-t3" style="margin-top:30px;">ข้อมูลการแบ่งทีมตามสี</div>
+      <div style="margin-top:12px;">
+        <div class="box-menu1" onclick="OpenTeam('RSOC-1')"><img src="./img/RSOC-1.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-1')" style="background-color: #ffff00;color:#000;">สีเหลือง</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-2')"><img src="./img/RSOC-2.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-2')" style="background-color: #18d75a;color:#000;">สีเขียว</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-3')"><img src="./img/RSOC-3.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-3')" style="background-color: #00b0f0;color:#000;">สีฟ้า</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-4')"><img src="./img/RSOC-4.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-4')" style="background-color: #ff00ff;color:#000;">สีชมพู</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-5')"><img src="./img/RSOC-5.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-5')" style="background-color: #ffc000;color:#fff;">สีส้ม</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-6')"><img src="./img/RSOC-6.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-6')" style="background-color: #0000ff;color:#fff;">สีน้ำเงิน</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-7')"><img src="./img/RSOC-7.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-7')" style="background-color: #d60093;color:#fff;">สีม่วง</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-8')"><img src="./img/RSOC-8.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-8')" style="background-color: #ff0000;color:#fff;">สีแดง</div>
+        </div>
+      </div>
+      <div class="clr"></div>
+      <center>
+        <div class="text-3">คลิกเลือกทีมที่ต้องการดูรายชื่อสมาชิกในทีม</div>
+        <div class="btn-t1" onclick="window.location.href='home.html';" style="margin-top:25px;">กลับหน้าแรก</div>
+      </center>
+    </div>
+  </main>
+
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="background: #fff;">
+      <div class="w3-container" style="width:100%;margin:auto;">
+        <div id="DisplayRSOC"></div>
+      </div>
+    </div>
+    <div class="clr" style="height:50px;"></div>
+  </div>
+
+
+  <footer class="container-fluid text-center">
+    <div id="isLoggedIn" style="color:#ffffff;"></div>
+    <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <div class="footer-main">
+      @<span class="footer-font-green">LINE</span> 
+      <span class="footer-font-navi">Retail</span> 
+      <span class="footer-font-blue">So</span><span class="footer-font-org">ciety</span>
+    </div>
+    <!--<div class="clr" style="height: 40px;"></div>-->
+  </footer>
+
+<script src="./js/allteam.js"></script>
+</body>
+</html>
