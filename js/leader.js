@@ -1,5 +1,9 @@
 
 $(document).ready(function () {
+
+
+
+
 /*
   $('.skillbar').skillBars({
     from: 0,
@@ -40,6 +44,5 @@ function NewSet() {
   });
 
 }
-
 
 
