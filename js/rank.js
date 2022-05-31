@@ -59,7 +59,7 @@ function NewSet() {
   str += "<span class='percent' style='float: right;'>"+ a3 +"</span></div></div>";  
   str += "<div class='bar'><div class='bar-info rsoc5' data-total="+ a4 +">ส้ม";
   str += "<span class='percent' style='float: right;'>"+ a4 +"</span></div></div>";  
-  str += "<div class='bar'><div class='bar-info rsoc6' data-total="+ a5 +">สัม";
+  str += "<div class='bar'><div class='bar-info rsoc6' data-total="+ a5 +">น้ำเงิน";
   str += "<span class='percent' style='float: right;'>"+ a5 +"</span></div></div>";  
   str += "<div class='bar'><div class='bar-info rsoc7' data-total="+ a6 +">ม่วง";
   str += "<span class='percent' style='float: right;'>"+ a6 +"</span></div></div>";  
