@@ -149,7 +149,7 @@ function OpenPage(page) {
     //str += '<div class="text-naviblue">Expected outcome</div>';
     str += '<div class="text-black">เราจะเก็บทุก ๆ ความเคลื่อนไหวของทุก ๆ คนที่เข้าร่วมกิจกรรมรวมไว้ในที่นี่</div>';
     str += '<div style="margin:20px auto;width:50%;">';
-    str += '<div class="box-menu" style="width:100%; font-size:11px;height:122px;" onclick="OpenLink(4)">';
+    str += '<div class="box-menu" style="width:100%; font-size:11px;height:122px;" onclick="OpenLink(7)">';
     str += '<img src="./img/photo.png" style="width:70px;"><br>คลิกเพื่อ<br>ดูภาพกิจกรรม';
     str += '</div>';
     //str += '<div class="box-menu" style="width:46%; font-size:11px;">';
