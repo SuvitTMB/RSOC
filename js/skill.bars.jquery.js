@@ -3,7 +3,6 @@
  * Author: @umarwebdeveloper
  * Licensed under the MIT license
  */
- var jQuery = "";
 (function ( $ ) {
  
     $.fn.skillBars = function( options ) {
