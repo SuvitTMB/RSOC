@@ -38,6 +38,7 @@ async function main() {
 
 
 async function getUserProfile() {
+  alert("Check Porfile");
   var str = "";
   const profile = await liff.getProfile();
   sessionStorage.setItem("LineID", profile.userId);
