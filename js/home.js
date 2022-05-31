@@ -188,6 +188,8 @@ function OpenLink(page) {
     location.href = 'home.html';
   } else if(page==6) {
     location.href = 'rsoc.html';
+  } else if(page==7) {
+    location.href = 'https://drive.google.com/drive/folders/1ImqFECrSQafDPx2aakZxBxmSBZidH4Nf?usp=sharing';
   } else if(page==99) {
     location.href = '#';
   }
