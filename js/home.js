@@ -80,7 +80,7 @@ function OpenPage(page) {
     str += '</ul></div>';
     str += '<div class="text-naviblue">วันศุกร์ที่ 24 มิถุนายน 2565</div>';
     str += '<div class="text-black"><ul style="margin-top:10px;margin-left:-20px;">';
-    str += '<li>08:00 - 10:00 น.<br>รับประทานอาหาเช้า และพักผ่อนตามอัธยาศัย</li>';
+    str += '<li>08:00 - 10:00 น.<br>รับประทานอาหารเช้า และพักผ่อนตามอัธยาศัย</li>';
     str += '<li>11:00 น.<br>เดินทางออกจากโรงแรม</li>';
     str += '<li>13:30 น.<br>ถึง ttb สำนักงานใหญ่</li>';
     str += '</ul></div>';
