@@ -235,6 +235,11 @@ function OpenLink(page) {
   }
 }
 
+function OpenTeam(x) {
+  //var sTeam = "RSOC-"+x ;
+  location.href = 'team.html?gid='+x;
+}
+
 
 function CloseAll() {
   document.getElementById('id01').style.display='none';
