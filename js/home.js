@@ -6,7 +6,8 @@ var ShowScore = 0;
 $(document).ready(function () {
   if(sessionStorage.getItem("EmpID_RSOC")==null) { location.href = "index.html"; }
   Connect_DB();
-  CheckPoll();
+  loadUser()
+  //CheckPoll();
 });
 
 
@@ -21,7 +22,8 @@ function Connect_DB() {
     measurementId: "G-9SKTRHHSW9"
   };
   firebase.initializeApp(firebaseConfig);
-  dbRSOCPoll = firebase.firestore().collection("RSOC_Poll");
+  dbRSOCMember = firebase.firestore().collection("RSOC_Member");
+  //dbRSOCPoll = firebase.firestore().collection("RSOC_Poll");
 }
 
 
@@ -35,6 +37,27 @@ function CheckPoll() {
     });
     document.getElementById('DisplayWait').style.display='none';
     document.getElementById('DisplayPoll').style.display='block';
+  });
+}
+
+
+function loadUser() { 
+  str = "";
+  dbRSOCMember.where('EmpID','==', parseFloat(sessionStorage.getItem("EmpID_RSOC")))
+  .limit(1)
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+
+      str +='<div class="box-user">';
+      str +='<div style="width:25%;float: left;text-align: center;padding:8px; "><img src="'+ doc.data().LinePicture +'" class="profile-team1">';
+      str +='<div style="margin-top:-30px;"><img src="./img/'+ doc.data().EmpTeam +'.png" style="width:40px;"></div></div>';
+      str +='<div style="width:75%;float: left;">';
+      str +='<div class="text-1" style="margin-top:5px;">'+ doc.data().EmpName +'<font color="#f68b1f"> ('+ doc.data().ShortName +')</font></div>';
+      str +='<div class="text-2">'+ doc.data().EmpRH +'<br><b>'+ doc.data().EmpPhone +'</b></div>';
+      str +='<div class="btn-t2" style="margin:2px 0 0 0;" onclick="OpenTeam(\''+ doc.data().EmpTeam +'\')">ดูรายละเอียดของทีม</div></div>';
+      str +='</div>';
+    }); 
+    $("#DisplayYourTeam").html(str);  
   });
 }
 
@@ -70,19 +93,35 @@ function OpenPage(page) {
     str += '<center><div class="btn-t33">กำหนดการ</div></center>';
     str += '<div class="text-naviblue">วันพฤหัสบดีที่ 23 มิถุนายน 2565</div>';
     str += '<div class="text-black"><ul style="margin-top:10px;margin-left:-20px;">';
-    str += '<li>09:30 – 10:00 น.<br>ลงทะเบียน ณ โรงแรม Buddy รับชุดอุปกรณ์</li>';
-    str += '<li>10:00 - 10:30 น.<br>รับประทานอาหารว่าง, Check in</li>';
-    str += '<li>10:30 - 12.00 น.<br>ผู้บริหารกล่าวทักทาย และให้ Direction</li>';
-    str += '<li>12:00 -13:30 น.<br>รับประทานอาหารเที่ยง ณ ห้องอาหารของโรงแรม</li>';
-    str += '<li>13:30 - 17:00 น.<br>กิจกรรม Team Building 5 ฐานกิจกรรม 8 ทีม ทีมละ 16 คน (เก็บคะแนน)</li>';
-    str += '<li>17:00 - 18:00 น.<br>เข้าห้องพัก พักผ่อนตามอัธยาศัย</li>';
-    str += '<li>18:00 - 23:00 น.<br>Dinner Party</li>';
+    str += '<li><font color="#f68b1f">09:00 น.</font> ลงทะเบียน <br>พร้อมแสดงผลตรวจ ATK  แจกของ welcome pack, แบ่งสีตามกิจกรรมกลุ่ม  (มีอาหารเช้าให้ทานก่อนเข้างาน) เปลี่ยนเสื้อ เพื่อร่วมกิจกรรมเลย* </li>';
+    str += '<li><font color="#f68b1f">09:30 น.</font> กิจกรรมอุ่นเครื่อง โดย อ.ดวง (S2G)<br><ul style="margin-left:-20px;">';
+      str += '<li>ละลายพฤติกรรม</li>';
+      str += '<li>กิจกรรม Who Song</li>';
+      str += '<li>บรรยาย Diversity and Inclusion </li>';
+      str += '<li>การบริหารความหลากหลายในการทำงานร่วมกันด้วยหลัก DISC</li>';
+    str += '</ul></li>';
+    str += '<li><font color="#f68b1f">12:00 น.</font> รับประทานอาหาร (Thai Buffet)</li>';
+    str += '<li><font color="#f68b1f">13:00 น.</font> แบ่งกลุ่มตามกิจกรรม <br>จำนวน 8 กลุ่ม ๆ ละ 15 คน กิจกรรม Outdoor สร้างพลังสร้างทีม (เรียนรู้หลัก ICARE ผ่านกิจกรรม) - 500 Challenges โดย อ.ดวง (S2G) </li>';
+    str += '<li><font color="#f68b1f">16:30 น.</font> สรุปกิจกรรม</li>';
+    str += '<li><font color="#f68b1f">17:00 น.</font> Chick in พักผ่อนตามอัธยาศัย </li>';
+    str += '<li><font color="#f68b1f">18:00 น.</font> กิจกรรมภาคค่ำ (ดนตรี)<ul style="margin-left:-20px;">';
+      str += '<li>ประกาศผลทีมที่มีคะแนนรวมสูงสุด 3 อันดับแรก และมอบรางวัล</li>';
+      str += '<li>ประกวดการแต่งกายและการแสดงทีม 9 ทีม ตามธีมปาร์ตี้ น. หนู ( ทีมละ 5 นาที )</li>';
+      str += '<li>คณะกรรมการตัดสินการประกวดการแต่งกาย  และมอบรางวัล</li>';
+    str += '</ul></li>';
+    str += '<li><font color="#f68b1f">21:00 น.</font> จับรางวัล Lucky Draw</li>';
+    str += '<li><font color="#f68b1f">21:30 น.</font> คุณนก กล่าวปิดกิจกรรม Day 1 </li>';
+    str += '<li><font color="#f68b1f">21:40 น.</font> ร้อง เต้น กับวงดนตรี </li>';
+    str += '<li><font color="#f68b1f">22:30 น.</font> พักผ่อน</li>';
     str += '</ul></div>';
+
     str += '<div class="text-naviblue">วันศุกร์ที่ 24 มิถุนายน 2565</div>';
     str += '<div class="text-black"><ul style="margin-top:10px;margin-left:-20px;">';
-    str += '<li>08:00 - 10:00 น.<br>รับประทานอาหารเช้า และพักผ่อนตามอัธยาศัย</li>';
-    str += '<li>11:00 น.<br>เดินทางออกจากโรงแรม</li>';
-    str += '<li>13:30 น.<br>ถึง ttb สำนักงานใหญ่</li>';
+    str += '<li><font color="#f68b1f">06:00 - 08:30 น.</font> รับประทานอาหารเช้า </li>';
+    str += '<li><font color="#f68b1f">09:00 - 10:00 น.</font> <br>-Ice Breaking<br>-RSOC s Direction & 2nd Half-Key Priorities.  </li>';
+    str += '<li><font color="#f68b1f">10:00 - 12:00 น.</font> <br>-TH’s OKRs, Key Priorities and team structure  ( 10 mins each by team head)<br>- Q&A</li>';
+    str += '<li><font color="#f68b1f">12:00 น.</font> รับประทานอาหารกลางวัน</li>';
+    str += '<li><font color="#f68b1f">13:30 น.</font> เดินทางกลับ</li>';
     str += '</ul></div>';
     str += '</div>';
   } else if(page==3) {
@@ -118,6 +157,7 @@ function OpenPage(page) {
     str += '<li>Gift Voucher Lotus<br><img src="./img/gift-1.jpg" style="width:60%;padding:5px 0 10px 0;"></li>';
     str += '<li>Gift Voucher After You<br><img src="./img/gift-2.jpg" style="width:60%;padding:5px 0 10px 0;"></li>';
     str += '<li>Gift Voucher KFC<br><img src="./img/gift-3.jpg" style="width:60%;padding:5px 0 10px 0;"></li>';
+    str += '<li>Gift Voucher PTT<br><img src="./img/gift-4.jpg" style="width:60%;padding:5px 0 10px 0;"></li>';
     str += '</ul></div>';
     str += '</div>';
   } else if(page==5) {

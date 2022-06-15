@@ -25,21 +25,21 @@ function CheckScore() {
     snapshot.forEach(doc=> {
       console.log(doc.data().EmpTeam+" === "+doc.data().SumAll);
       if(doc.data().EmpTeam=="RSOC-1") {
-        a0 = doc.data().SumAll;
+        a0 = doc.data().Game1+doc.data().Game2+doc.data().Game3+doc.data().Game4+doc.data().Game5;
       } else if(doc.data().EmpTeam=="RSOC-2") { 
-        a1 = doc.data().SumAll;
+        a1 = doc.data().Game1+doc.data().Game2+doc.data().Game3+doc.data().Game4+doc.data().Game5;
       } else if(doc.data().EmpTeam=="RSOC-3") { 
-        a2 = doc.data().SumAll;
+        a2 = doc.data().Game1+doc.data().Game2+doc.data().Game3+doc.data().Game4+doc.data().Game5;
       } else if(doc.data().EmpTeam=="RSOC-4") { 
-        a3 = doc.data().SumAll;
+        a3 = doc.data().Game1+doc.data().Game2+doc.data().Game3+doc.data().Game4+doc.data().Game5;
       } else if(doc.data().EmpTeam=="RSOC-5") { 
-        a4 = doc.data().SumAll;
+        a4 = doc.data().Game1+doc.data().Game2+doc.data().Game3+doc.data().Game4+doc.data().Game5;
       } else if(doc.data().EmpTeam=="RSOC-6") { 
-        a5 = doc.data().SumAll;
+        a5 = doc.data().Game1+doc.data().Game2+doc.data().Game3+doc.data().Game4+doc.data().Game5;
       } else if(doc.data().EmpTeam=="RSOC-7") { 
-        a6 = doc.data().SumAll;
+        a6 = doc.data().Game1+doc.data().Game2+doc.data().Game3+doc.data().Game4+doc.data().Game5;
       } else if(doc.data().EmpTeam=="RSOC-8") { 
-        a7 = doc.data().SumAll;
+        a7 = doc.data().Game1+doc.data().Game2+doc.data().Game3+doc.data().Game4+doc.data().Game5;
       }
     });
     //alert(a0+"-"+a1+"-"+a2+"-"+a3+"-"+a4+"-"+a5+"-"+a6+"-"+a7);
