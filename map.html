@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+		text-align: center;
+      }
+
+      #map {
+        height: 500px;
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.5070730144953!2d100.5000581140535!3d13.928386096931327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e28458a8f8db0d%3A0x2d1ff585e5bd4922!2z4Lia4Lix4LiU4LiU4Li14LmJIOC5guC4reC5gOC4o-C4teC4ouC4meC4l-C4reC4pSDguKPguLTguYDguKfguK3guKPguYzguYTguIvguJTguYw!5e0!3m2!1sth!2sth!4v1653549573400!5m2!1sth!2sth" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<!--
+  <div id="map"></div>
+    <script>
+      function initMap() {
+			var mapOptions = {
+			  center: {lat: 13.847860, lng: 100.604274},
+			  zoom: 18,
+			}
+				
+			var maps = new google.maps.Map(document.getElementById("map"),mapOptions);
+			
+			var marker = new google.maps.Marker({
+			   position: new google.maps.LatLng(13.847616, 100.604736),
+			   map: maps,
+			   title: 'ถนน ลาดปลาเค้า',
+			   //icon: 'images/camping-icon.png',
+			});
+			var info = new google.maps.InfoWindow({
+				content : '<div style="font-size: 25px;color: red">ThaiCreate.Com Camping</div>'
+			});
+
+			google.maps.event.addListener(marker, 'click', function() {
+				info.open(maps, marker);
+			});
+		}
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK3RgqSLy1toc4lkh2JVFQ5ipuRB106vU&callback=initMap" async defer></
+script>
+-->
+  </body>
+</html>
