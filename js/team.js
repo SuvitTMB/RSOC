@@ -41,9 +41,9 @@ function getParameterByName(name, url) {
 function SelectMeunu() {
   if(aClickMenu!="") {
     xClickMenu = aClickMenu;
+    document.getElementById("ClickMenu").value = aClickMenu;
     //document.getElementById(aClickMenu).value = aClickMenu;
     //$("#"+aClickMenu).val();  
-    document.getElementById("ClickMenu").value = aClickMenu;
   } else {
     xClickMenu = document.getElementById("ClickMenu").value;
   }
@@ -55,19 +55,23 @@ function SelectMeunu() {
 function loadData() {
   var i = 0;
   var str = "";
-  str += '<table class="table" style="width:95%; margin:20px auto;"><tbody>';
+  str += '<div class="text-3">คลิกที่ชื่อเพื่อดูรายละเอียดเพิ่มเติม</div>';
+  str += '<table class="table" style="width:95%; margin:10px auto 20px auto;"><tbody>';
   dbRSOCMember.where('EmpTeam','==', xClickMenu)
   .orderBy('EmpPosition','asc')
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
       str += '<tr onclick="OpenProfile(\''+ doc.id +'\')" class="LinkProfile">';
       if(doc.data().LinePicture!="") {
-        str += '<td class="td-center td-padding" style="width:12%;text-align:center;"><img src="'+doc.data().LinePicture+'" class="profile-team"></td>';
+        str += '<td class="td-center td-padding" style="width:12%;text-align:center;"><img src="'+doc.data().LinePicture+'" class="profile-team" onerror="javascript:imgError(this,\''+ doc.id +'\')">';
+        str += '<div style="font-size:10px; color:#f68b1f;"><b>DISC-<font color="#0056ff">'+doc.data().DISC+'</font></b></div></td>';
       } else {
         if(doc.data().EmpSex=="M") {
-          str += '<td class="td-center td-padding" style="width:12%;text-align:center;"><img src="./img/m.png" class="profile-team"></td>';
+          str += '<td class="td-center td-padding" style="width:12%;text-align:center;"><img src="./img/m.png" class="profile-team">';
+          str += '<div style="font-size:10px; color:#f68b1f;"><b>DISC-<font color="#0056ff">'+doc.data().DISC+'</font></b></div></td>';
         } else {
-          str += '<td class="td-center td-padding" style="width:12%;text-align:center;"><img src="./img/f.png" class="profile-team"></td>';
+          str += '<td class="td-center td-padding" style="width:12%;text-align:center;"><img src="./img/f.png" class="profile-team">';
+          str += '<div style="font-size:10px; color:#f68b1f;"><b>DISC-<font color="#0056ff">'+doc.data().DISC+'</font></b></div></td>';
         }
       }
       str += '<td class="td-padding" style="width:88%;"><font color="#0056ff"><b>'+doc.data().EmpName+'</b></font>';
@@ -101,9 +105,9 @@ function OpenProfile(uid) {
         }
       }
       str += '<div class="text-1">'+doc.data().EmpName+'<font color="#f68b1f"> ('+doc.data().ShortName+')</font></div>';
-      str += '<div class="text-2">'+doc.data().EmpZone+'<br>'+doc.data().EmpPosition+'<br>'+doc.data().EmpRH+'<br>'+doc.data().EmpPhone+'</div>';
+      str += '<div class="text-2">'+doc.data().EmpZone+'<br>'+doc.data().EmpPosition+'<br>'+doc.data().EmpRH+'<br>โทรศัพท์ : '+doc.data().EmpPhone+'<br>D I S C : <b><font color="#0056ff">Type '+ doc.data().DISC+'</font></b></div>';
       if(doc.data().LoadImg!="") {
-        str += '<div style="margin-top:13px;text-align:center;"><img src="'+doc.data().LoadImg+'" style="width:100%; border-radius: 25px;"><div class="btn-t33" style="margin-top:10px;background:#69b8f1;border: solid #fff 1px;">'+doc.data().ShortName+'</div></div>';
+        str += '<div style="margin-top:13px;text-align:center;"><img src="'+doc.data().LoadImg+'" style="width:100%; border-radius: 25px;"><div class="btn-t33" style="margin-top:3px;background:#69b8f1;border: solid #fff 1px;">'+doc.data().ShortName+'</div></div>';
       }
       //str += '</div>';
     });
@@ -150,6 +154,21 @@ function ConvrtDate(str) {
   return [day, mnth, date.getFullYear()+543].join("/");
 }
 
+function imgError(image,id) {
+    image.onerror = "";
+    image.src = "./img/box.jpg";
+    //alert(sessionStorage.getItem("LinePicture")+"==="+id);
+    UpdateLinePicture(id);
+    return true;
+}
+
+
+function UpdateLinePicture(id) {
+    dbRSOCMember.doc(id).update({
+      LinePicture : sessionStorage.getItem("LinePicture")
+    });
+
+}
 
 function checkZero(data){
   if(data.length == 1){

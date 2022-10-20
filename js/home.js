@@ -47,15 +47,25 @@ function loadUser() {
   .limit(1)
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
-
-      str +='<div class="box-user">';
-      str +='<div style="width:25%;float: left;text-align: center;padding:8px; "><img src="'+ doc.data().LinePicture +'" class="profile-team1">';
-      str +='<div style="margin-top:-30px;"><img src="./img/'+ doc.data().EmpTeam +'.png" style="width:40px;"></div></div>';
-      str +='<div style="width:75%;float: left;">';
-      str +='<div class="text-1" style="margin-top:5px;">'+ doc.data().EmpName +'<font color="#f68b1f"> ('+ doc.data().ShortName +')</font></div>';
-      str +='<div class="text-2">'+ doc.data().EmpRH +'<br><b>'+ doc.data().EmpPhone +'</b></div>';
-      str +='<div class="btn-t2" style="margin:2px 0 0 0;" onclick="OpenTeam(\''+ doc.data().EmpTeam +'\')">ดูรายละเอียดของทีม</div></div>';
-      str +='</div>';
+      if(doc.data().EmpTeam!="") {
+        str +='<div class="box-user">';
+        str +='<div style="width:25%;float: left;text-align: center;padding:8px; "><img src="'+ doc.data().LinePicture +'" class="profile-team1">';
+        str +='<div style="margin-top:-30px;"><img src="./img/'+ doc.data().EmpTeam +'.png" style="width:40px;"></div></div>';
+        str +='<div style="width:75%;float: left;">';
+        str +='<div class="text-1" style="margin-top:5px;">'+ doc.data().EmpName +'<font color="#f68b1f"> ('+ doc.data().ShortName +')</font></div>';
+        str +='<div class="text-2">'+ doc.data().EmpRH +'<br><b>'+ doc.data().EmpPhone +'</b></div>';
+        str +='<div class="btn-t2" style="margin:2px 0 0 0;" onclick="OpenTeam(\''+ doc.data().EmpTeam +'\')">ดูรายละเอียดของทีม</div></div>';
+        str +='</div>';
+      } else {
+        str +='<div class="box-user">';
+        str +='<div style="width:25%;float: left;text-align: center;padding:8px; "><img src="'+ doc.data().LinePicture +'" class="profile-team1">';
+        str +='</div>';
+        str +='<div style="width:75%;float: left;">';
+        str +='<div class="text-1" style="margin-top:5px;">'+ doc.data().EmpName +'<font color="#f68b1f"> ('+ doc.data().ShortName +')</font></div>';
+        str +='<div class="text-2">'+ doc.data().EmpRH +'<br><b>'+ doc.data().EmpPhone +'</b></div>';
+        str +='<div class="btn-t2" style="margin:2px 0 0 0;cursor: default;background:#666;border:1px solid #fff;">ไม่ได้เข้าร่วมแบ่งทีมตามสี</div></div>';
+        str +='</div>';
+      }
     }); 
     $("#DisplayYourTeam").html(str);  
   });
@@ -91,37 +101,20 @@ function OpenPage(page) {
     str += '<div class="slideanim slide"><img src="./img/agenda.jpg" style="width:100%;border-top-left-radius: 20px;border-top-right-radius: 20px;"></div>';
     str += '<div class="text-wb1" style="width:90%;margin:auto;">';
     str += '<center><div class="btn-t33">กำหนดการ</div></center>';
-    str += '<div class="text-naviblue">วันพฤหัสบดีที่ 23 มิถุนายน 2565</div>';
+    str += '<div class="text-naviblue">วันพฤหัสบดีที่ 17 พฤศจิกายน 2565</div>';
     str += '<div class="text-black"><ul style="margin-top:10px;margin-left:-20px;">';
-    str += '<li><font color="#f68b1f">09:00 น.</font> ลงทะเบียน <br>พร้อมแสดงผลตรวจ ATK  แจกของ welcome pack, แบ่งสีตามกิจกรรมกลุ่ม  (มีอาหารเช้าให้ทานก่อนเข้างาน) เปลี่ยนเสื้อ เพื่อร่วมกิจกรรมเลย* </li>';
-    str += '<li><font color="#f68b1f">09:30 น.</font> กิจกรรมอุ่นเครื่อง โดย อ.ดวง (S2G)<br><ul style="margin-left:-20px;">';
-      str += '<li>ละลายพฤติกรรม</li>';
-      str += '<li>กิจกรรม Who Song</li>';
-      str += '<li>บรรยาย Diversity and Inclusion </li>';
-      str += '<li>การบริหารความหลากหลายในการทำงานร่วมกันด้วยหลัก DISC</li>';
+    str += '<li><font color="#f68b1f">09:30 น.</font> <br>ลงทะเบียน / แสดงผลตรวจ ATK / รับประทานอาหารว่าง</li>';
+    str += '<li><font color="#f68b1f">10:00 น.</font> MC greeting / Ice breaking</li>';
+    str += '<li><font color="#f68b1f">10:30 น.</font> RSOC Direction by Khun Natthawan</li>';
+    str += '<li><font color="#f68b1f">12:00 น.</font> Lunch</li>';
+    str += '<li><font color="#f68b1f">13:15 น.</font> Refreshment / Grouping</li>';
+    str += '<li><font color="#f68b1f">13:30 น.</font> <br>กีฬามหาสนุก (Team Building) ชิงถ้วยและเงินรางวัลมูลค่ารวมกว่าหมื่นบาท<ul style="margin-left:-20px;">';
+      str += '<li>การแข่งขันกีฬา</li>';
+      str += '<li>การประกวดขบวนพาเหรด</li>';
+      str += '<li>การประกวดกองเชียร์</li>';
     str += '</ul></li>';
-    str += '<li><font color="#f68b1f">12:00 น.</font> รับประทานอาหาร (Thai Buffet)</li>';
-    str += '<li><font color="#f68b1f">13:00 น.</font> แบ่งกลุ่มตามกิจกรรม <br>จำนวน 8 กลุ่ม ๆ ละ 15 คน กิจกรรม Outdoor สร้างพลังสร้างทีม (เรียนรู้หลัก ICARE ผ่านกิจกรรม) - 500 Challenges โดย อ.ดวง (S2G) </li>';
-    str += '<li><font color="#f68b1f">16:30 น.</font> สรุปกิจกรรม</li>';
-    str += '<li><font color="#f68b1f">17:00 น.</font> Chick in พักผ่อนตามอัธยาศัย </li>';
-    str += '<li><font color="#f68b1f">18:00 น.</font> กิจกรรมภาคค่ำ (ดนตรี)<ul style="margin-left:-20px;">';
-      str += '<li>ประกาศผลทีมที่มีคะแนนรวมสูงสุด 3 อันดับแรก และมอบรางวัล</li>';
-      str += '<li>ประกวดการแต่งกายและการแสดงทีม 9 ทีม ตามธีมปาร์ตี้ น. หนู ( ทีมละ 5 นาที )</li>';
-      str += '<li>คณะกรรมการตัดสินการประกวดการแต่งกาย  และมอบรางวัล</li>';
-    str += '</ul></li>';
-    str += '<li><font color="#f68b1f">21:00 น.</font> จับรางวัล Lucky Draw</li>';
-    str += '<li><font color="#f68b1f">21:30 น.</font> คุณนก กล่าวปิดกิจกรรม Day 1 </li>';
-    str += '<li><font color="#f68b1f">21:40 น.</font> ร้อง เต้น กับวงดนตรี </li>';
-    str += '<li><font color="#f68b1f">22:30 น.</font> พักผ่อน</li>';
-    str += '</ul></div>';
-
-    str += '<div class="text-naviblue">วันศุกร์ที่ 24 มิถุนายน 2565</div>';
-    str += '<div class="text-black"><ul style="margin-top:10px;margin-left:-20px;">';
-    str += '<li><font color="#f68b1f">06:00 - 08:30 น.</font> รับประทานอาหารเช้า </li>';
-    str += '<li><font color="#f68b1f">09:00 - 10:00 น.</font> <br>-Ice Breaking<br>-RSOC s Direction & 2nd Half-Key Priorities.  </li>';
-    str += '<li><font color="#f68b1f">10:00 - 12:00 น.</font> <br>-TH’s OKRs, Key Priorities and team structure  ( 10 mins each by team head)<br>- Q&A</li>';
-    str += '<li><font color="#f68b1f">12:00 น.</font> รับประทานอาหารกลางวัน</li>';
-    str += '<li><font color="#f68b1f">13:30 น.</font> เดินทางกลับ</li>';
+    str += '<li><font color="#f68b1f">17:00 น.</font> Break</li>';
+    str += '<li><font color="#f68b1f">17:30 น.</font> Dinner Party</li>';
     str += '</ul></div>';
     str += '</div>';
   } else if(page==3) {
@@ -161,6 +154,7 @@ function OpenPage(page) {
     str += '</ul></div>';
     str += '</div>';
   } else if(page==5) {
+    alert("Open");
     str += '<div class="slideanim slide"><img src="./img/survey.jpg" style="width:100%;border-top-left-radius: 20px;border-top-right-radius: 20px;"></div>';
     str += '<div class="text-wb1" style="width:90%;margin:auto;">';
     str += '<center><div class="btn-t33">ประเมินผลกิจกรรม</div></center>';
@@ -230,15 +224,20 @@ function OpenLink(page) {
     location.href = 'rsoc.html';
   } else if(page==7) {
     location.href = 'https://drive.google.com/drive/folders/1ImqFECrSQafDPx2aakZxBxmSBZidH4Nf?usp=sharing';
+  } else if(page==8) {
+    location.href = 'thevoice.html';
+  } else if(page==9) {
+    location.href = 'disc.html';
   } else if(page==99) {
     location.href = '#';
   }
 }
 
+
 function OpenTeam(x) {
-  //var sTeam = "RSOC-"+x ;
   location.href = 'team.html?gid='+x;
 }
+
 
 
 function CloseAll() {

@@ -6,7 +6,7 @@ var dateString = "";
 
 $(document).ready(function () {
 
-/*
+
   sessionStorage.clear(); 
   var str = "";
   var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
@@ -19,9 +19,9 @@ $(document).ready(function () {
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
   Connect_DB();
-  */
+  
 
-  main();
+  //main();
 });
 
 
@@ -72,39 +72,23 @@ function Connect_DB() {
   firebase.initializeApp(firebaseConfig);
   dbProfile = firebase.firestore().collection("CheckProfile");
   dbRSOCMember = firebase.firestore().collection("RSOC_Member");
-  //dbTNIdate = firebase.firestore().collection("TNIdate");
-  //dbTNIapprove = firebase.firestore().collection("TNImember");
-  //dbTNIRedeemPoint = firebase.firestore().collection("TNIRedeemPoint");
-  //dbTNIlog = firebase.firestore().collection("TNIlog");
-  //CheckTNIdate();
   CheckData();
 }
 
-/*
-function CheckTNIdate() {
-  dbTNIdate.where('CodeName','==',sCodeName)
-  .limit(1)
-  .get().then((snapshot)=> {
-    snapshot.forEach(doc=> {
-      sessionStorage.setItem("TNIdate", doc.data().DateUpload);
-      $("#DateUpload").html(doc.data().DateUpload);  
-    });
-  });
-}
-*/
+
+
 function CheckData() {
   var sCheck = 0;
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
       sCheck = 1;
-      sessionStorage.setItem("EmpID_RSOC", doc.data().empID);
-      sessionStorage.setItem("EmpName_RSOC", doc.data().empName);
-      sessionStorage.setItem("EmpBR_RSOC", doc.data().empBr);
-      //alert("==="+sessionStorage.getItem("EmpID_RSOC"));
+      sessionStorage.setItem("EmpID_Vote", doc.data().empID);
+      sessionStorage.setItem("EmpName_Vote", doc.data().empName);
+      sessionStorage.setItem("EmpBR_Vote", doc.data().empBr);
+      sessionStorage.setItem("VoteTheVoice", doc.data().VoteTheVoice);
     });
     if(sCheck == 0) {
-      //location.href = 'registerpage.html';
       document.getElementById('loading').style.display='none';
       document.getElementById('NewSurvey').style.display='block';
     } else {
@@ -116,18 +100,16 @@ function CheckData() {
 
 var DoneSurvey = 0;
 function CheckSurvey() {
-  dbRSOCMember.where('EmpID','==',parseFloat(sessionStorage.getItem("EmpID_RSOC")))
-  //.where('StatusRegister','==',1)
+  dbRSOCMember.where('EmpID','==',parseFloat(sessionStorage.getItem("EmpID_Vote")))
   .limit(1)
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
       DoneSurvey = 1;
-      if(doc.data().StatusRegister==0) {
+      if(doc.data().VoteTheVoice==0) {
         document.getElementById('loading').style.display='none';
         document.getElementById('NewSurvey').style.display='none';
         document.getElementById('NewUploadFile').style.display='block';
-
-      } else if(doc.data().StatusRegister==1) {
+      } else {
         document.getElementById('loading').style.display='none';
         document.getElementById('OldSurvey').style.display='block';
       }
@@ -143,10 +125,11 @@ function CheckSurvey() {
 
 
 
-
+/*
 function gotoShowSurvey() {
   location.href = 'showsurvey.html';
 }
+*/
 
 function NewDate() {
   var today = new Date();
