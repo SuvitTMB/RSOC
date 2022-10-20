@@ -2,7 +2,26 @@
     font: 400 15px ekachon-regular, sans-serif;
     line-height: 1.8;
     color: #818181;
+    /*
+    background: url(../img/bg-logo.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+    */
   }
+
+  .body1 {
+    font: 400 15px ekachon-regular, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    background: url(../img/thevoice.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+  }
+
   h2 {
     font-size: 20px;
     text-transform: uppercase;
