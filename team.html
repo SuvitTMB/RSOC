@@ -71,44 +71,19 @@
   </nav>
 
   <main id="main">
-      <div><img src="./img/color.jpg" style="width:100%;margin-top:50px;max-height: 300px;"></div>
-    <div class="container">
+    <div><img src="./img/color.jpg" style="width:100%;margin-top:50px;max-height: 300px;"></div>
+    <div class="container" style="max-width: 450px;">
       <center><div class="btn-t33">การจัดเแบ่งทีม</div></center>
-      <div class="text-team">กิจกรรมนี้จะทำงานร่วมกันเป็นทีม โดยมีการจัดแบ่งทีมตามสี รวม 8 ทีม ในแต่ละทีมจะต้องเข้าร่วมตามฐานต่าง ๆ ที่กำหนดไว้ ในแต่ละฐานจะได้คะแนนสะสมเพื่อนำมาเป็นคะแนนการแข่งขันประเภททีม ทีมที่ทำคะแนนได้สูงสุดรับรางวัลทั้งทีมไปเลย งานนี้แจ้งใหญ่ลุ้นรางวัลนับแสนเลยทีเดียว</div>
-
-<!--
-      <div class="text-headteam">คุณและทีมของคุณ</div>
-      <div class="box-user">
-      </div>
-      <div class="text-headteam" style="margin-top:30px;">ข้อมูลการแบ่งทีมตามสี</div>
-      <div>
-        <div class="box-menu1" onclick="OpenTeam(1)"><img src="./img/Team-1.png" style="width:80px;"><br>สีเหลือง</div>
-        <div class="box-menu1" onclick="OpenTeam(2)"><img src="./img/Team-2.png" style="width:80px;"><br>สีเขียว</div>
-        <div class="box-menu1" onclick="OpenTeam(3)"><img src="./img/Team-3.png" style="width:80px;"><br>สีฟ้า</div>
-        <div class="box-menu1" onclick="OpenTeam(4)"><img src="./img/Team-4.png" style="width:80px;"><br>สีชมพู</div>
-        <div class="box-menu1" onclick="OpenTeam(5)"><img src="./img/Team-5.png" style="width:80px;"><br>สีส้ม</div>
-        <div class="box-menu1" onclick="OpenTeam(6)"><img src="./img/Team-6.png" style="width:80px;"><br>สีน้ำเงิน</div>
-        <div class="box-menu1" onclick="OpenTeam(7)"><img src="./img/Team-7.png" style="width:80px;"><br>สีม่วง</div>
-        <div class="box-menu1" onclick="OpenTeam(8)"><img src="./img/Team-8.png" style="width:80px;"><br>สีแดง</div>
-      </div>
-      <center>
-        <div class="btn-t1" onclick="window.location.href='home.html';" style="margin-top:25px;">กลับหน้าแรก</div>
-      </center>
-    </div>
--->
+      <div class="text-team">กิจกรรมนี้จะทำงานร่วมกันเป็นทีม โดยมีการจัดแบ่งทีมตามสี รวม 4 ทีม ในแต่ละทีมจะต้องเข้าร่วมตามฐานต่าง ๆ ที่กำหนดไว้ ในแต่ละฐานจะได้คะแนนสะสมเพื่อนำมาเป็นคะแนนการแข่งขันประเภททีม ทีมที่ทำคะแนนได้สูงสุดรับรางวัลทั้งทีมไปเลย </div>
       <div>
         <center>
         <div id="OpenData" class="t-table" style="margin-top:0px;">
           <div style="color:#0056ff;padding:8px;">
             <select id="ClickMenu" onchange="SelectMeunu()" class="menu-team" style="width:150px;text-align: center;">
-              <option value="RSOC-1" id="RSOC-1">ทีม สีเหลือง</option>
-              <option value="RSOC-2" id="RSOC-2">ทีม สีเขียว</option>
-              <option value="RSOC-3" id="RSOC-3">ทีม สีฟ้า</option>
-              <option value="RSOC-4" id="RSOC-4">ทีม สีชมพู</option>
-              <option value="RSOC-5" id="RSOC-5">ทีม สีส้ม</option>
-              <option value="RSOC-6" id="RSOC-6">ทีม สีน้ำเงิน</option>
-              <option value="RSOC-7" id="RSOC-7">ทีม สีม่วง</option>
-              <option value="RSOC-8" id="RSOC-8">ทีม สีแดง</option>
+              <option value="RSOC-1" id="RSOC-1">ทีม สีแดง</option>
+              <option value="RSOC-2" id="RSOC-2">ทีม สีม่วง</option>
+              <option value="RSOC-3" id="RSOC-3">ทีม สีเหลือง</option>
+              <option value="RSOC-4" id="RSOC-4">ทีม สีเขียว</option>
            </select>
             <div class="menu-subtext">เลือกทีมที่ต้องการดูข้อมูล</div>
             <div id="DisplayRSOCSum"></div>
@@ -141,10 +116,10 @@
 
   <div id="id01" class="w3-modal w3-animate-opacity">
     <div class="w3-modal-content w3-card-4" style="background: #fff;">
-      <div class="w3-container" style="width:100%;padding:20px;">
+      <div class="w3-container" style="width:100%;padding:20px;max-width: 450px; margin:auto;">
         <div id="DisplayProfile"></div>
         <center>
-          <div class="btn-t1" onclick="CloseAll()" style="margin-top:25px;">ปิดหน้าต่างนี้</div>
+          <div class="btn-t1" onclick="CloseAll()" style="margin-top:15px;">ปิดหน้าต่างนี้</div>
         </center>
       </div>
     </div>

@@ -46,35 +46,21 @@
 
   <main id="main">
     <div><img src="./img/3toONE.jpg" style="width:100%;margin-top:50px;max-height: 300px;"></div>
-    <div class="container">
-      <center><div class="btn-t33">RSOC Team Buliding 2022</div></center>
-
-
+    <div class="container" style="max-width: 450px; ">
+      <center><div class="btn-t33">RSOC Team Buliding#2</div></center>
       <div class="btn-t3">คุณและทีมของคุณ</div>
       <div id="DisplayYourTeam" style="margin-top:8px;"></div>
-
       <div class="clr"></div>
       <div style="margin-top:15px;">
-        <div class="btn-t3">ข้อมูลกิจกรรม</div>
+        <div class="btn-t3">เกี่ยวกับกิจกรรม</div>
         <div class="clr" style="height: 10px;"></div>
         <!--<div class="box-menu" onclick="OpenPage(1)"><img src="./img/intro.png" style="width:60px;"><br>เกี่ยวกับ<br>กิจกรรม</div>-->
         <div class="box-menu" onclick="OpenPage(2)"><img src="./img/schedule1.png" style="width:60px;"><br>กำหนดการ<br>กิจกรรม</div>
         <div class="box-menu" onclick="OpenLink(1)"><img src="./img/location.png" style="width:60px;"><br>สถานที่<br>จัดกิจกรรม</div>
         <!--<div class="box-menu" onclick="OpenPage(3)"><img src="./img/writing.png" style="width:60px;"><br>เอกสาร<br>กิจกรรม</div>-->
-        <div class="box-menu" onclick="OpenLink(2)"><img src="./img/team.png" style="width:60px;"><br>การจัดแบ่ง<br>ทีมกิจกรรม</div>
-        <div class="box-menu" onclick="OpenLink(6)"><img src="./img/introduce.png" style="width:60px;"><br>รู้จักกับ<br>เพื่อนในทีม</div>
-
-
-        <!--<div class="box-menu" onclick="OpenPage(9)"><img src="./img/chat.png" style="width:60px;"><br>แลกเปลี่ยน<br>ความคิดเห็น</div>-->
-<!--
-        <div class="box-menu" onclick="OpenPage(4)"><img src="./img/rewards.png" style="width:60px;"><br>รางวัล<br>การแข่งขัน</div>
-        <div class="box-menu" onclick="OpenLink(4)"><img src="./img/leaderboard.png" style="width:60px;"><br>ผู้นำ<br>การแข่งขัน</div>
-        <div class="box-menu" onclick="OpenPage(5)">
-          <div id="DisplayWait" style="display:block;"><img src="./img/loading.gif" style="padding-top:30px;width:20px;"></div>
-          <div id="DisplayPoll" style="display:none;"><img src="./img/poll.png" style="width:60px;"><br>ประเมินผล<br>กิจกรรม</div>
-        </div>
-        <div class="box-menu" onclick="OpenPage(6)"><img src="./img/photo.png" style="width:60px;"><br>ภาพ<br>กิจกรรม</div>
--->
+        <div class="box-menu" onclick="OpenLink(6)"><img src="./img/introduce.png" style="width:60px;"><br>รู้จักกัน<br>ให้มากขึ้น</div>
+        <div class="box-menu" onclick="OpenLink(8)"><img src="./img/thevoice.png" style="width:60px;"><br>the Voice<br>R S O C</div>
+        <div class="box-menu" onclick="OpenLink(9)"><img src="./img/disc.png" style="width:60px;"><br>รู้จักกับ<br>D I S C</div>
       </div>
       <div id="NewSurvey" style="display: none;margin-top:10px;">
         <div class="btn-survey1" onclick="window.location.href='registerpage.html';">คลิกเพื่อลงทะเบียน<br>ก่อนเข้าร่วมกิจกรรม</div>
@@ -85,12 +71,35 @@
       <div id="CancelSurvey" style="display: none;margin-top:10px;">
         <div class="btn-survey1" onclick="#" style="background-color: #ff0000;border:1px solid #ffffff;">คุณไม่ได้รับอนุญาต<br>ในการเข้าใช้ระบบงาน</div>
       </div>
+      <div class="clr"></div>
+
+      <div class="btn-t3" style="margin-top:30px;">ข้อมูลการแบ่งทีมตามสี</div>
+      <div style="margin-top:12px;">
+        <div class="box-menu1" onclick="OpenTeam('RSOC-1')"><img src="./img/RSOC-1.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-1')" style="background-color: #ff0000;color:#000;">สีแดง</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-2')"><img src="./img/RSOC-2.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-2')" style="background-color: #a900ff;color:#000;">สีม่วง</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-3')"><img src="./img/RSOC-3.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-3')" style="background-color: #ffff00;color:#000;">สีเหลือง</div>
+        </div>
+        <div class="box-menu1" onclick="OpenTeam('RSOC-4')"><img src="./img/RSOC-4.png" style="width:80px;">
+          <div class="btn-t11" onclick="OpenTeam('RSOC-4')" style="background-color: #08c91f;color:#000;">สีเขียว</div>
+        </div>
+        <center>
+          <div class="text-3">คลิกเลือกทีมที่ต้องการดูรายชื่อสมาชิกในทีม</div>
+        </center>
+
+      </div>
+      <div class="clr"></div>
+
     </div>
   </main>
 
 
   <div id="id01" class="w3-modal w3-animate-opacity">
-    <div class="w3-modal-content w3-card-4" style="background: #fff;">
+    <div class="w3-modal-content w3-card-4" style="background: #fff;max-width: 450px; margin:auto;">
       <div class="w3-container" style="width:100%;margin:auto;">
         <div id="DisplayRSOC"></div>
       </div>
