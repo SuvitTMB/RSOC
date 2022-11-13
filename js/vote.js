@@ -1,4 +1,11 @@
 var UserVote = 0;
+var TVnumber1 = "เจ้าพ่อเซียงไฮ";
+var TVnumber2 = "สุดใจ (ปู พงษ์สิทธิ์)";
+var TVnumber3 = "นะหน้าทอง (โจอี้ ภูวศิษฐ์)";
+var TVnumber4 = "ขอบใจนะ (แพรว คณิตกุล)";
+var TVnumber5 = "หมาดห่วง (วง Cocktail)";
+var TVnumber6 = "เสียใจได้ยินไหม (ใหม่ เจริญปุระ)";
+var TVnumber7 = "ไหง่ง่อง (ตั๊กแตน ชลดา)";
 
 $(document).ready(function () {
   if(sessionStorage.getItem("EmpID_Vote")==null) { location.href = "vote-thevoice.html"; }
@@ -55,6 +62,21 @@ function SelectTeam(x) {
   var str = "";
   str += '<div style="width:100%;margin:auto;text-align:center;">';
   str += '<div><img src="./img/TV'+x+'.png" class="VoteImg1"></div>';
+  if(x==1) {
+    str += '<div style="margin-top:-20px;color:#0056ff;"><b>บทเพลง : '+ TVnumber1 +'</b></div>';
+  } else if(x==2) {
+    str += '<div style="margin-top:-20px;color:#0056ff;"><b>บทเพลง : '+ TVnumber2 +'</b></div>';
+  } else if(x==3) {
+    str += '<div style="margin-top:-20px;color:#0056ff;"><b>บทเพลง : '+ TVnumber3 +'</b></div>';
+  } else if(x==4) {
+    str += '<div style="margin-top:-20px;color:#0056ff;"><b>บทเพลง : '+ TVnumber4 +'</b></div>';
+  } else if(x==5) {
+    str += '<div style="margin-top:-20px;color:#0056ff;"><b>บทเพลง : '+ TVnumber5 +'</b></div>';
+  } else if(x==6) {
+    str += '<div style="margin-top:-20px;color:#0056ff;"><b>บทเพลง : '+ TVnumber6 +'</b></div>';
+  } else if(x==7) {
+    str += '<div style="margin-top:-20px;color:#0056ff;"><b>บทเพลง : '+ TVnumber7 +'</b></div>';
+  }
   str += '<div class="btn-t1" onclick="VoteNumber('+x+')" style="margin-top:15px;">โหวตหมายเลข '+x+'</div>';
   str += '<div class="btn-t2" onclick="CloseAll()" style="margin-top:15px;">เลือกหมายเลขใหม่</div>';
   str += '<div class="clr" style="height: 25px;"></div>';
