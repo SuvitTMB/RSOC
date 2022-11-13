@@ -1,1 +1,126 @@
-var _0x2a3a33=_0x1f3a;function _0x1f3a(_0x868bd5,_0x4882cf){var _0x237bf8=_0x237b();return _0x1f3a=function(_0x1f3abc,_0x86d58e){_0x1f3abc=_0x1f3abc-0x91;var _0x5755f3=_0x237bf8[_0x1f3abc];return _0x5755f3;},_0x1f3a(_0x868bd5,_0x4882cf);}(function(_0x48b4a7,_0x4cf1b2){var _0x36572e=_0x1f3a,_0x5dc823=_0x48b4a7();while(!![]){try{var _0x4dc295=parseInt(_0x36572e(0xbe))/0x1+parseInt(_0x36572e(0xb1))/0x2*(-parseInt(_0x36572e(0xb4))/0x3)+-parseInt(_0x36572e(0xa8))/0x4*(-parseInt(_0x36572e(0x9a))/0x5)+parseInt(_0x36572e(0xab))/0x6+-parseInt(_0x36572e(0xc2))/0x7+-parseInt(_0x36572e(0xad))/0x8+-parseInt(_0x36572e(0x9e))/0x9*(-parseInt(_0x36572e(0xc1))/0xa);if(_0x4dc295===_0x4cf1b2)break;else _0x5dc823['push'](_0x5dc823['shift']());}catch(_0x2d1ac2){_0x5dc823['push'](_0x5dc823['shift']());}}}(_0x237b,0xcaa29));var UserVote=0x0;$(document)[_0x2a3a33(0xa5)](function(){var _0x284e7b=_0x2a3a33;sessionStorage[_0x284e7b(0x9c)]('EmpID_Vote')==null&&(location[_0x284e7b(0xa3)]=_0x284e7b(0xb0)),Connect_DB();});function Connect_DB(){var _0x2b35b3=_0x2a3a33,_0x5f4835={'apiKey':'AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE','authDomain':'retailproject-6f4fc.firebaseapp.com','projectId':_0x2b35b3(0xb6),'storageBucket':_0x2b35b3(0x91),'messagingSenderId':_0x2b35b3(0xbc),'appId':_0x2b35b3(0xa7),'measurementId':_0x2b35b3(0x9b)};firebase[_0x2b35b3(0x99)](_0x5f4835),dbProfile=firebase[_0x2b35b3(0xa0)]()[_0x2b35b3(0x93)](_0x2b35b3(0xc4)),dbRSOCMember=firebase[_0x2b35b3(0xa0)]()[_0x2b35b3(0x93)](_0x2b35b3(0xbb)),CheckVote();}var Eid='';function _0x237b(){var _0x46513f=['style','html','RSOC_Member','653667385625','<div\x20class=\x22clr\x22\x20style=\x22height:\x2025px;\x22></div>','471146LUvlUH','block','none','70WcJTut','6603086Wevcsi','#DisplaySelectVote','CheckProfile','#DisplayProfile','id01','retailproject-6f4fc.appspot.com','display','collection','limit','<div><img\x20src=\x22./img/TV','update','getElementById','doc','initializeApp','5ALVLlC','G-9SKTRHHSW9','getItem','VoteTeam','1982097XPAsgr',')\x22\x20style=\x22margin-top:15px;\x22>โหวตหมายเลข\x20','firestore','ShowTeam','data','href','EmpID','ready','<div\x20class=\x22btn-t2\x22\x20onclick=\x22CloseAll()\x22\x20style=\x22margin-top:15px;\x22>เลือกหมายเลขใหม่</div>','1:653667385625:web:a5aed08500de80839f0588','3273148syUdJO','then','where','1867788DVZIUb','.jpg\x22\x20class=\x22VoteImg1\x22></div>','10531360GgcnMg','<div\x20style=\x22margin-top:50px;\x22><img\x20src=\x22./img/thankyou2.gif\x22\x20class=\x22VoteImg1\x22\x20style=\x22width:80%;\x22></div>','loading','vote-thevoice.html','105302QalBfd','</div>','<div\x20style=\x22width:100%;margin:auto;text-align:center;\x22>','3JznfOm','<div\x20class=\x22btn-t2\x22\x20onclick=\x22CloseAll()\x22\x20style=\x22margin-top:15px;\x22>ดูรายการที่คุณโหวต</div>','retailproject-6f4fc','forEach','VoteTheVoice'];_0x237b=function(){return _0x46513f;};return _0x237b();}function CheckVote(){var _0x1a7194=_0x2a3a33,_0x183822='';dbRSOCMember[_0x1a7194(0xaa)](_0x1a7194(0xa4),'==',parseFloat(sessionStorage['getItem']('EmpID_Vote')))[_0x1a7194(0x94)](0x1)['get']()[_0x1a7194(0xa9)](_0xf82df8=>{var _0x464bc3=_0x1a7194;_0xf82df8[_0x464bc3(0xb7)](_0x3ec251=>{var _0x42cc27=_0x464bc3;DoneSurvey=0x1,_0x3ec251[_0x42cc27(0xa2)]()[_0x42cc27(0xb8)]==0x0?(Eid=_0x3ec251['id'],document[_0x42cc27(0x97)](_0x42cc27(0xaf))['style']['display']=_0x42cc27(0xc0),document[_0x42cc27(0x97)](_0x42cc27(0x9d))[_0x42cc27(0xb9)][_0x42cc27(0x92)]=_0x42cc27(0xbf),document[_0x42cc27(0x97)]('ShowTeam')[_0x42cc27(0xb9)]['display']='none'):(_0x183822+='<div\x20style=\x22width:100%;margin:auto;text-align:center;\x22>',_0x183822+=_0x42cc27(0x95)+_0x3ec251['data']()[_0x42cc27(0xb8)]+'.jpg\x22\x20style=\x22width:85%;\x22></div>',_0x183822+='<div\x20class=\x22header-font\x22\x20style=\x22color:#fff;margin-top:10px;\x22>รายการที่คุณได้ทำการโหวตเลือกไว้</div>',_0x183822+=_0x42cc27(0xb2),$(_0x42cc27(0xc3))['html'](_0x183822),document[_0x42cc27(0x97)]('loading')['style'][_0x42cc27(0x92)]='none',document[_0x42cc27(0x97)]('VoteTeam')['style'][_0x42cc27(0x92)]='none',document['getElementById'](_0x42cc27(0xa1))[_0x42cc27(0xb9)][_0x42cc27(0x92)]=_0x42cc27(0xbf));});});}function SelectTeam(_0x24b9dc){var _0x3b73a7=_0x2a3a33,_0x14c781='';_0x14c781+=_0x3b73a7(0xb3),_0x14c781+=_0x3b73a7(0x95)+_0x24b9dc+_0x3b73a7(0xac),_0x14c781+='<div\x20class=\x22btn-t1\x22\x20onclick=\x22VoteNumber('+_0x24b9dc+_0x3b73a7(0x9f)+_0x24b9dc+_0x3b73a7(0xb2),_0x14c781+=_0x3b73a7(0xa6),_0x14c781+=_0x3b73a7(0xbd),_0x14c781+=_0x3b73a7(0xb2),$(_0x3b73a7(0xc5))['html'](_0x14c781),document['getElementById'](_0x3b73a7(0xc6))[_0x3b73a7(0xb9)][_0x3b73a7(0x92)]=_0x3b73a7(0xbf);}function VoteNumber(_0x11fe53){var _0x3aa2df=_0x2a3a33;SaveVote(_0x11fe53);var _0x1c6305='';_0x1c6305+=_0x3aa2df(0xb3),_0x1c6305+=_0x3aa2df(0xae),_0x1c6305+=_0x3aa2df(0xb5),_0x1c6305+='<div\x20class=\x22clr\x22\x20style=\x22height:\x2025px;\x22></div>',_0x1c6305+='</div>',$(_0x3aa2df(0xc5))[_0x3aa2df(0xba)](_0x1c6305);}function SaveVote(_0x629451){var _0x53cffc=_0x2a3a33;Eid!=''&&dbRSOCMember[_0x53cffc(0x98)](Eid)[_0x53cffc(0x96)]({'VoteTheVoice':parseFloat(_0x629451)}),CheckVote();}function CloseAll(){var _0x238158=_0x2a3a33;document[_0x238158(0x97)](_0x238158(0xc6))[_0x238158(0xb9)][_0x238158(0x92)]=_0x238158(0xc0);}
+var UserVote = 0;
+
+$(document).ready(function () {
+  if(sessionStorage.getItem("EmpID_Vote")==null) { location.href = "vote-thevoice.html"; }
+  Connect_DB();
+});
+
+
+function Connect_DB() {
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
+    authDomain: "retailproject-6f4fc.firebaseapp.com",
+    projectId: "retailproject-6f4fc",
+    storageBucket: "retailproject-6f4fc.appspot.com",
+    messagingSenderId: "653667385625",
+    appId: "1:653667385625:web:a5aed08500de80839f0588",
+    measurementId: "G-9SKTRHHSW9"
+  };
+  firebase.initializeApp(firebaseConfig);
+  dbProfile = firebase.firestore().collection("CheckProfile");
+  dbRSOCMember = firebase.firestore().collection("RSOC_Member");
+  CheckVote();
+}
+
+
+var Eid = "";
+function CheckVote() {
+  var str = "";
+  dbRSOCMember.where('EmpID','==',parseFloat(sessionStorage.getItem("EmpID_Vote")))
+  .limit(1)
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      DoneSurvey = 1;
+      if(doc.data().VoteTheVoice==0) {
+        Eid = doc.id;
+        document.getElementById('loading').style.display='none';
+        document.getElementById('VoteTeam').style.display='block';
+        document.getElementById('ShowTeam').style.display='none';
+      } else {
+        str += '<div style="width:100%;margin:auto;text-align:center;">';
+        str += '<div><img src="./img/TV'+doc.data().VoteTheVoice+'.jpg" style="width:85%;"></div>';
+        str += '<div class="header-font" style="color:#fff;margin-top:10px;">รายการที่คุณได้ทำการโหวตเลือกไว้</div>';
+        str += '</div>';
+        $('#DisplaySelectVote').html(str);
+        document.getElementById('loading').style.display='none';
+        document.getElementById('VoteTeam').style.display='none';
+        document.getElementById('ShowTeam').style.display='block';
+      }
+    });
+  });
+}
+
+
+function SelectTeam(x) {
+  var str = "";
+  str += '<div style="width:100%;margin:auto;text-align:center;">';
+  str += '<div><img src="./img/TV'+x+'.png" class="VoteImg1"></div>';
+  str += '<div class="btn-t1" onclick="VoteNumber('+x+')" style="margin-top:15px;">โหวตหมายเลข '+x+'</div>';
+  str += '<div class="btn-t2" onclick="CloseAll()" style="margin-top:15px;">เลือกหมายเลขใหม่</div>';
+  str += '<div class="clr" style="height: 25px;"></div>';
+  str += '</div>';
+  $('#DisplayProfile').html(str);
+  document.getElementById('id01').style.display='block';
+  //alert(Eid);
+}
+
+
+function VoteNumber(x) {
+  SaveVote(x);
+  var str = "";
+  str += '<div style="width:100%;margin:auto;text-align:center;">';
+  str += '<div style="margin-top:50px;"><img src="./img/thankyou2.gif" class="VoteImg1" style="width:80%;"></div>';
+  str += '<div class="btn-t2" onclick="CloseAll()" style="margin-top:15px;">ดูรายการที่คุณโหวต</div>';
+  str += '<div class="clr" style="height: 25px;"></div>';
+  str += '</div>';
+  $('#DisplayProfile').html(str);
+}
+
+
+function SaveVote(x) {
+  if(Eid!="") {
+    dbRSOCMember.doc(Eid).update({
+      VoteTheVoice : parseFloat(x)
+    });
+  }
+  CheckVote();
+}
+
+
+/*
+
+function gotoShowSurvey() {
+  location.href = 'showsurvey.html';
+}
+
+function NewDate() {
+  var today = new Date();
+  var day = today.getDate() + "";
+  var month = (today.getMonth() + 1) + "";
+  var year = today.getFullYear() + "";
+  var hour = today.getHours() + "";
+  var minutes = today.getMinutes() + "";
+  var seconds = today.getSeconds() + "";
+  var ampm = hour >= 12 ? 'PM' : 'AM';
+  day = checkZero(day);
+  month = checkZero(month);
+  year = checkZero(year);
+  hour = checkZero(hour);
+  minutes = checkZero(minutes);
+  seconds = checkZero(seconds);
+  dateString = day + "/" + month + "/" + year + " " + hour + ":" + minutes + ":" + seconds +" "+ ampm;
+}
+
+
+function checkZero(data){
+  if(data.length == 1){
+    data = "0" + data;
+  }
+  return data;
+}
+*/
+
+function CloseAll() {
+  document.getElementById('id01').style.display='none';
+  //document.getElementById('id02').style.display='none';
+}
