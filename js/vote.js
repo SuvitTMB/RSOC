@@ -38,7 +38,7 @@ function CheckVote() {
         document.getElementById('ShowTeam').style.display='none';
       } else {
         str += '<div style="width:100%;margin:auto;text-align:center;">';
-        str += '<div><img src="./img/TV'+doc.data().VoteTheVoice+'.jpg" style="width:85%;"></div>';
+        str += '<div><img src="./img/TV'+doc.data().VoteTheVoice+'.png" style="width:85%;"></div>';
         str += '<div class="header-font" style="color:#fff;margin-top:10px;">รายการที่คุณได้ทำการโหวตเลือกไว้</div>';
         str += '</div>';
         $('#DisplaySelectVote').html(str);
