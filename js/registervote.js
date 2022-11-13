@@ -1,1 +1,215 @@
-var _0x105c0c=_0x1889;(function(_0x3826a8,_0x3fd47c){var _0x2c9801=_0x1889,_0x1fb6b7=_0x3826a8();while(!![]){try{var _0x574845=parseInt(_0x2c9801(0x1f9))/0x1+-parseInt(_0x2c9801(0x1df))/0x2+parseInt(_0x2c9801(0x1c2))/0x3*(-parseInt(_0x2c9801(0x1ef))/0x4)+-parseInt(_0x2c9801(0x1bd))/0x5*(parseInt(_0x2c9801(0x1c8))/0x6)+-parseInt(_0x2c9801(0x1f8))/0x7+parseInt(_0x2c9801(0x1b1))/0x8+parseInt(_0x2c9801(0x1d6))/0x9*(parseInt(_0x2c9801(0x1db))/0xa);if(_0x574845===_0x3fd47c)break;else _0x1fb6b7['push'](_0x1fb6b7['shift']());}catch(_0x435725){_0x1fb6b7['push'](_0x1fb6b7['shift']());}}}(_0x3d05,0xbebcc));var EidProfile='',EidRSOCMember='',dateString=new Date()[_0x105c0c(0x1fe)]('en-US',{'timeZone':_0x105c0c(0x1ae)}),xdateCheck='',sCountView=0x0;$(document)[_0x105c0c(0x1dd)](function(){var _0x423fe0=_0x105c0c,_0x212aa3='';_0x212aa3+=_0x423fe0(0x1bb)+sessionStorage[_0x423fe0(0x1fb)](_0x423fe0(0x1e2))+'\x22\x20class=\x22add-profile\x22\x20style=\x22margin:-60px\x20auto\x2020px\x20auto;\x22></div>',_0x212aa3+='<div\x20class=\x22NameLine\x22>'+sessionStorage[_0x423fe0(0x1fb)](_0x423fe0(0x1b4))+_0x423fe0(0x1fc),$(_0x423fe0(0x1c3))[_0x423fe0(0x1f3)](_0x212aa3),Connect_DB();});function Connect_DB(){var _0x4a9250=_0x105c0c,_0x3605d8={'apiKey':'AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE','authDomain':'retailproject-6f4fc.firebaseapp.com','projectId':'retailproject-6f4fc','databaseURL':_0x4a9250(0x1e5),'storageBucket':'retailproject-6f4fc.appspot.com','messagingSenderId':_0x4a9250(0x1f2),'appId':_0x4a9250(0x1cf),'measurementId':_0x4a9250(0x1de)};firebase[_0x4a9250(0x1c9)](_0x3605d8),dbProfile=firebase[_0x4a9250(0x1c7)]()[_0x4a9250(0x1b5)](_0x4a9250(0x1af)),dbRSOCMember=firebase[_0x4a9250(0x1c7)]()[_0x4a9250(0x1b5)](_0x4a9250(0x1cc)),CheckData();}var CheckFoundData=0x0;function CheckData(){var _0x22756e=_0x105c0c;dbProfile[_0x22756e(0x1e3)](_0x22756e(0x1e7),'==',sessionStorage[_0x22756e(0x1fb)](_0x22756e(0x1ca)))[_0x22756e(0x1fa)]()[_0x22756e(0x1f0)](_0x1fb26f=>{var _0x5cdf58=_0x22756e;_0x1fb26f[_0x5cdf58(0x1ba)](_0x41e329=>{var _0x4be920=_0x5cdf58;CheckFoundData=_0x41e329['data']()[_0x4be920(0x1d1)],EidProfile=_0x41e329['id'],document[_0x4be920(0x1d5)]('txtEmpID')[_0x4be920(0x1b3)]=_0x41e329['data']()[_0x4be920(0x1d0)],document[_0x4be920(0x1d5)](_0x4be920(0x1b7))[_0x4be920(0x1ea)](_0x4be920(0x1ec),'DisableEmpID'),document[_0x4be920(0x1d5)](_0x4be920(0x1b8))['value']=_0x41e329[_0x4be920(0x1d3)]()[_0x4be920(0x1b0)],document[_0x4be920(0x1d5)](_0x4be920(0x1b8))[_0x4be920(0x1ea)](_0x4be920(0x1ec),'DisableEmpID'),document[_0x4be920(0x1d5)](_0x4be920(0x1cb))[_0x4be920(0x1b3)]=_0x41e329[_0x4be920(0x1d3)]()['empPhone'],document['getElementById']('loading')['style'][_0x4be920(0x1ee)]=_0x4be920(0x1c5),document[_0x4be920(0x1d5)](_0x4be920(0x1b9))[_0x4be920(0x1c0)][_0x4be920(0x1ee)]=_0x4be920(0x1c6);}),CheckFoundData==0x0&&(document[_0x5cdf58(0x1d5)](_0x5cdf58(0x1cd))[_0x5cdf58(0x1c0)]['display']='none',document['getElementById']('ShowForm')[_0x5cdf58(0x1c0)][_0x5cdf58(0x1ee)]=_0x5cdf58(0x1c6));}),dbRSOCMember[_0x22756e(0x1e3)](_0x22756e(0x1f6),'==',parseFloat(sessionStorage[_0x22756e(0x1fb)]('EmpID_RSOC')))[_0x22756e(0x1fa)]()['then'](_0x570cf2=>{var _0x28d75c=_0x22756e;_0x570cf2[_0x28d75c(0x1ba)](_0x2b4c09=>{EidRSOCMember=_0x2b4c09['id'];});});}var sCheckBottom=0x0;function CheckRegister(){var _0x1e4f78=_0x105c0c;NewDate();var _0x2ebb44=Math['round'](Date['now']()/0x3e8),_0x17ce0a='';sCheckBottom=0x0,stxtEmpID=document[_0x1e4f78(0x1d5)]('txtEmpID')['value'],stxtEmpName=document['getElementById'](_0x1e4f78(0x1b8))[_0x1e4f78(0x1b3)],stxtEmpPhone=document[_0x1e4f78(0x1d5)](_0x1e4f78(0x1cb))[_0x1e4f78(0x1b3)],stxtEmpBR=_0x1e4f78(0x1d8),stxtEmpRH='ttb\x20bank',sessionStorage['setItem'](_0x1e4f78(0x1f4),stxtEmpID),sessionStorage[_0x1e4f78(0x1d9)](_0x1e4f78(0x1da),stxtEmpBR),stxtEmpID!==null&&stxtEmpID!==''?sCheckBottom=sCheckBottom+0x1:_0x17ce0a+=_0x1e4f78(0x1f7),stxtEmpName!==null&&stxtEmpName!==''?sCheckBottom=sCheckBottom+0x1:_0x17ce0a+='-\x20กรอกชื่อ-นามสกุล\x0a',stxtEmpPhone!==null&&stxtEmpPhone!==''?sCheckBottom=sCheckBottom+0x1:_0x17ce0a+=_0x1e4f78(0x1ed),sCheckBottom!=0x3?alert(_0x1e4f78(0x1e6)+_0x17ce0a):(sessionStorage['setItem'](_0x1e4f78(0x1f4),stxtEmpID),sessionStorage[_0x1e4f78(0x1d9)](_0x1e4f78(0x1b6),stxtEmpName),sessionStorage['setItem'](_0x1e4f78(0x1da),stxtEmpBR),EidProfile!=''?dbProfile[_0x1e4f78(0x1dc)](EidProfile)['update']({'linename':sessionStorage[_0x1e4f78(0x1fb)](_0x1e4f78(0x1b4)),'linePicture':sessionStorage['getItem'](_0x1e4f78(0x1e2)),'empPicture':sessionStorage['getItem']('LinePicture'),'empPhone':stxtEmpPhone,'empRH':stxtEmpRH,'empBr':stxtEmpBR,'DateAccept':xdateCheck,'DateRegister':dateString}):dbProfile[_0x1e4f78(0x1c1)]({'lineID':sessionStorage[_0x1e4f78(0x1fb)](_0x1e4f78(0x1ca)),'linename':sessionStorage[_0x1e4f78(0x1fb)](_0x1e4f78(0x1b4)),'linePicture':sessionStorage[_0x1e4f78(0x1fb)](_0x1e4f78(0x1e2)),'empPicture':sessionStorage[_0x1e4f78(0x1fb)](_0x1e4f78(0x1e2)),'empID':stxtEmpID,'empName':stxtEmpName,'empPhone':stxtEmpPhone,'empRH':stxtEmpRH,'empBr':stxtEmpBR,'statusconfirm':0x2,'statusedit':0x1,'statuspass':0x0,'lastcheckin':'','memo':'','EmpCheckIN':0x0,'DateAccept':xdateCheck,'DateRegister':dateString}),CheckRSOCMember());}function _0x1889(_0x171a16,_0x5ce4bc){var _0x3d05bf=_0x3d05();return _0x1889=function(_0x18897c,_0x434f5b){_0x18897c=_0x18897c-0x1ad;var _0x51bbce=_0x3d05bf[_0x18897c];return _0x51bbce;},_0x1889(_0x171a16,_0x5ce4bc);}function CheckRSOCMember(){var _0x2ceb9f=_0x105c0c;NewDate();var _0x3446c6=Math[_0x2ceb9f(0x1fd)](Date['now']()/0x3e8),_0x34e436='';document['getElementById']('id01')['style'][_0x2ceb9f(0x1ee)]=_0x2ceb9f(0x1c6),dbRSOCMember[_0x2ceb9f(0x1e3)](_0x2ceb9f(0x1f6),'==',parseFloat(sessionStorage[_0x2ceb9f(0x1fb)](_0x2ceb9f(0x1f4))))[_0x2ceb9f(0x1fa)]()[_0x2ceb9f(0x1f0)](_0x2e538d=>{var _0x2a7569=_0x2ceb9f;_0x2e538d['forEach'](_0x4cad56=>{EidRSOCMember=_0x4cad56['id'];}),EidRSOCMember!=''&&dbRSOCMember[_0x2a7569(0x1dc)](EidRSOCMember)['update']({'LineID':sessionStorage[_0x2a7569(0x1fb)](_0x2a7569(0x1ca)),'LineName':sessionStorage[_0x2a7569(0x1fb)]('LineName'),'LinePicture':sessionStorage['getItem']('LinePicture'),'EmpPhone':stxtEmpPhone,'empRH':stxtEmpRH,'empBr':stxtEmpBR,'StatusRegister':0x1,'LoadImg':sessionStorage[_0x2a7569(0x1fb)]('UploadRSOCImg'),'TimeStampRec':_0x3446c6,'TimeRegister':dateString});});}function CheckButtomClick(){var _0x277e0b=_0x105c0c;if($('#txtEmpAccept')['is'](':checked'))$('#SubmitApp')['removeClass'](_0x277e0b(0x1be));else{var _0x511969=document[_0x277e0b(0x1d5)](_0x277e0b(0x1eb));_0x511969[_0x277e0b(0x1e9)][_0x277e0b(0x1c1)](_0x277e0b(0x1be));}}function GotoHome(){var _0x45931c=_0x105c0c;location[_0x45931c(0x1e4)]=_0x45931c(0x1e8);}function NewDate(){var _0xc6fa38=_0x105c0c,_0x3c7e55=new Array(0xc);_0x3c7e55[0x0]='January',_0x3c7e55[0x1]='February',_0x3c7e55[0x2]=_0xc6fa38(0x1ce),_0x3c7e55[0x3]='April',_0x3c7e55[0x4]='May',_0x3c7e55[0x5]=_0xc6fa38(0x1f5),_0x3c7e55[0x6]=_0xc6fa38(0x1e1),_0x3c7e55[0x7]=_0xc6fa38(0x1bc),_0x3c7e55[0x8]=_0xc6fa38(0x1d2),_0x3c7e55[0x9]=_0xc6fa38(0x1d4),_0x3c7e55[0xa]=_0xc6fa38(0x1ad),_0x3c7e55[0xb]='December';var _0xae2bdf=new Date(),_0x585e7d=_0xae2bdf[_0xc6fa38(0x1bf)]()+'',_0x1c57fe=_0xae2bdf[_0xc6fa38(0x1f1)]()+'',_0x56de76=_0xae2bdf[_0xc6fa38(0x1f1)]()+0x1+'',_0x15dba6=_0xae2bdf[_0xc6fa38(0x1e0)]()+'',_0x42a119=_0xae2bdf['getHours']()+'',_0x54cac0=_0xae2bdf['getMinutes']()+'',_0x3438ff=_0xae2bdf[_0xc6fa38(0x1b2)]()+'',_0x514ef1=_0x42a119>=0xc?'PM':'AM';_0x585e7d=checkZero(_0x585e7d),_0x56de76=checkZero(_0x56de76),_0x15dba6=checkZero(_0x15dba6),_0x42a119=checkZero(_0x42a119),_0x54cac0=checkZero(_0x54cac0),_0x3438ff=checkZero(_0x3438ff),dateString=_0x585e7d+'/'+_0x56de76+'/'+_0x15dba6+'\x20'+_0x42a119+':'+_0x54cac0+':'+_0x3438ff+'\x20'+_0x514ef1,xdateCheck=_0x3c7e55[_0x1c57fe]+'\x20'+_0x585e7d+',\x20'+_0x15dba6+'\x20'+_0x42a119+':'+_0x54cac0+':'+_0x3438ff;}function _0x3d05(){var _0x4c43c7=['LineName','collection','EmpName_RSOC','txtEmpID','txtEmpName','ShowForm','forEach','<div><img\x20src=\x22','August','5spqSUt','disabledbutton','getDate','style','add','9lilkZg','#MyProfile','length','none','block','firestore','5962554WkapmL','initializeApp','LineID','txtEmpPhone','RSOC_Member','loading','March','1:653667385625:web:a5aed08500de80839f0588','empID','statusconfirm','September','data','October','getElementById','14688081XzixkH','id01','Retail\x20Strategy\x20and\x20Omni\x20Channel\x20Experience','setItem','EmpBR_RSOC','20XlvkGh','doc','ready','G-9SKTRHHSW9','1316286BmOuOG','getFullYear','July','LinePicture','where','href','https://file-upload-6f4fc.firebaseio.com','คุณยังกรอกข้อมูลไม่ครบ\x0a\x0a','lineID','vote-thevoice.html','classList','setAttribute','SubmitApp','class','-\x20กรอกหมายเลขโทรศัพท์\x0a','display','1633524tpJXOD','then','getMonth','653667385625','html','EmpID_RSOC','June','EmpID','-\x20กรอกรหัสพนักงาน\x0a','6720791ydTFlL','546398YLeDge','get','getItem','</div>','round','toLocaleString','November','Asia/Jakarta','CheckProfile','empName','6464016UMxLAN','getSeconds','value'];_0x3d05=function(){return _0x4c43c7;};return _0x3d05();}function checkZero(_0x6328c7){var _0x49a71d=_0x105c0c;return _0x6328c7[_0x49a71d(0x1c4)]==0x1&&(_0x6328c7='0'+_0x6328c7),_0x6328c7;}function CloseAll(){var _0x17cd7f=_0x105c0c;document[_0x17cd7f(0x1d5)](_0x17cd7f(0x1d7))[_0x17cd7f(0x1c0)]['display']=_0x17cd7f(0x1c5);}
+var EidProfile = "";
+var EidRSOCMember = "";
+var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
+var xdateCheck = "";
+var sCountView = 0;
+
+$(document).ready(function () {
+  var str = "";
+  str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile" style="margin:-60px auto 20px auto;"></div>';
+  str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
+  $("#MyProfile").html(str);  
+  Connect_DB();
+});
+
+
+function Connect_DB() {
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
+    authDomain: "retailproject-6f4fc.firebaseapp.com",
+    projectId: "retailproject-6f4fc",
+    databaseURL: "https://file-upload-6f4fc.firebaseio.com",
+    storageBucket: "retailproject-6f4fc.appspot.com",
+    messagingSenderId: "653667385625",
+    appId: "1:653667385625:web:a5aed08500de80839f0588",
+    measurementId: "G-9SKTRHHSW9"
+  };
+  firebase.initializeApp(firebaseConfig);
+  dbProfile = firebase.firestore().collection("CheckProfile");
+  dbRSOCMember = firebase.firestore().collection("RSOC_Member");
+  CheckData();
+}
+
+
+var CheckFoundData = 0;
+function CheckData() {
+  dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      CheckFoundData = doc.data().statusconfirm;
+      EidProfile = doc.id;
+      document.getElementById("txtEmpID").value = doc.data().empID;
+      document.getElementById('txtEmpID').setAttribute("class","DisableEmpID"); 
+      document.getElementById("txtEmpName").value = doc.data().empName;
+      document.getElementById('txtEmpName').setAttribute("class","DisableEmpID"); 
+      document.getElementById("txtEmpPhone").value = doc.data().empPhone;
+      document.getElementById('loading').style.display='none';
+      document.getElementById('ShowForm').style.display='block';
+    });
+    if(CheckFoundData==0) {
+      document.getElementById('loading').style.display='none';
+      document.getElementById('ShowForm').style.display='block';
+    }
+  });
+
+
+  dbRSOCMember.where('EmpID','==',parseFloat(sessionStorage.getItem("EmpID_RSOC")))
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      EidRSOCMember = doc.id;
+    });
+  });
+
+}
+
+
+var sCheckBottom = 0;
+function CheckRegister() {
+  NewDate();
+  var TimeStampDate = Math.round(Date.now() / 1000);
+  var str="";
+  sCheckBottom = 0;
+  stxtEmpID = document.getElementById("txtEmpID").value;
+  stxtEmpName = document.getElementById("txtEmpName").value;
+  stxtEmpPhone = document.getElementById("txtEmpPhone").value;
+  stxtEmpBR = "Retail Strategy and Omni Channel Experience";
+  stxtEmpRH = "ttb bank";
+
+  sessionStorage.setItem("EmpID_RSOC", stxtEmpID);
+  sessionStorage.setItem("EmpBR_RSOC", stxtEmpBR);
+
+  if(stxtEmpID !== null && stxtEmpID !== '') { sCheckBottom = sCheckBottom+1; } else { str += '- กรอกรหัสพนักงาน\n'; }
+  if(stxtEmpName !== null && stxtEmpName !== '') { sCheckBottom = sCheckBottom+1; } else { str += '- กรอกชื่อ-นามสกุล\n'; }
+  if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; } else { str += '- กรอกหมายเลขโทรศัพท์\n'; }
+
+  if(sCheckBottom!=3) { 
+    alert("คุณยังกรอกข้อมูลไม่ครบ\n\n"+str);
+  } else {
+    sessionStorage.setItem("EmpID_RSOC", stxtEmpID);
+    sessionStorage.setItem("EmpName_RSOC", stxtEmpName);
+    sessionStorage.setItem("EmpBR_RSOC", stxtEmpBR);
+    if(EidProfile!="") {
+      dbProfile.doc(EidProfile).update({
+        linename : sessionStorage.getItem("LineName"),
+        linePicture : sessionStorage.getItem("LinePicture"),
+        empPicture : sessionStorage.getItem("LinePicture"),
+        empPhone : stxtEmpPhone,
+        empRH : stxtEmpRH,
+        empBr : stxtEmpBR,
+        DateAccept : xdateCheck,
+        DateRegister : dateString
+      });
+    } else {
+      dbProfile.add({
+        lineID : sessionStorage.getItem("LineID"),
+        linename : sessionStorage.getItem("LineName"),
+        linePicture : sessionStorage.getItem("LinePicture"),
+        empPicture : sessionStorage.getItem("LinePicture"),
+        empID : stxtEmpID,
+        empName : stxtEmpName,
+        empPhone : stxtEmpPhone,
+        empRH : stxtEmpRH,
+        empBr : stxtEmpBR,
+        statusconfirm : 2,
+        statusedit : 1,
+        statuspass : 0,
+        lastcheckin : '',
+        memo : '',
+        EmpCheckIN : 0,
+        DateAccept : xdateCheck,
+        DateRegister : dateString
+      });
+    }
+    CheckRSOCMember();
+  }
+}
+
+
+function CheckRSOCMember() {
+  NewDate();
+  var TimeStampDate = Math.round(Date.now() / 1000);
+  var str="";
+  document.getElementById('id01').style.display='block';
+  dbRSOCMember.where('EmpID','==',parseFloat(sessionStorage.getItem("EmpID_RSOC")))
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      EidRSOCMember = doc.id;
+    });
+    if(EidRSOCMember!="") {
+      dbRSOCMember.doc(EidRSOCMember).update({
+        LineID : sessionStorage.getItem("LineID"),
+        LineName : sessionStorage.getItem("LineName"),
+        LinePicture : sessionStorage.getItem("LinePicture"),
+        EmpPhone : stxtEmpPhone,
+        empRH : stxtEmpRH,
+        empBr : stxtEmpBR,
+        //ShortName : stxtShortName,
+        StatusRegister : 1,
+        LoadImg : sessionStorage.getItem("UploadRSOCImg"),
+        TimeStampRec : TimeStampDate,
+        TimeRegister : dateString
+      });
+    }
+  });
+}
+
+
+function CheckButtomClick() {
+  if($('#txtEmpAccept').is(':checked')) {
+    $('#SubmitApp').removeClass('disabledbutton');
+  } else {
+    var element = document.getElementById("SubmitApp");
+    element.classList.add("disabledbutton");
+  }
+}
+
+function GotoHome() {
+  location.href = "vote-thevoice.html";
+}
+
+
+function NewDate() {
+  var months = new Array(12);
+  months[0] = "January";
+  months[1] = "February";
+  months[2] = "March";
+  months[3] = "April";
+  months[4] = "May";
+  months[5] = "June";
+  months[6] = "July";
+  months[7] = "August";
+  months[8] = "September";
+  months[9] = "October";
+  months[10] = "November";
+  months[11] = "December";
+  var today = new Date();
+  var day = today.getDate() + "";
+  var monthEN = (today.getMonth()) + "";
+  var month = (today.getMonth() + 1) + "";
+  var year = today.getFullYear() + "";
+  var hour = today.getHours() + "";
+  var minutes = today.getMinutes() + "";
+  var seconds = today.getSeconds() + "";
+  var ampm = hour >= 12 ? 'PM' : 'AM';
+  day = checkZero(day);
+  month = checkZero(month);
+  year = checkZero(year);
+  hour = checkZero(hour);
+  minutes = checkZero(minutes);
+  seconds = checkZero(seconds);
+  dateString = day + "/" + month + "/" + year + " " + hour + ":" + minutes + ":" + seconds +" "+ ampm;
+  xdateCheck = months[monthEN] + " " + day + ", " + year + " " + hour + ":" + minutes + ":" + seconds ;
+}
+
+
+function checkZero(data){
+  if(data.length == 1){
+    data = "0" + data;
+  }
+  return data;
+}
+
+
+function CloseAll() {
+  document.getElementById('id01').style.display='none';
+}
